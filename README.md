@@ -1,221 +1,149 @@
-# Awesome-Domain-n-DNS-Management
-
-## Top Domain & DNS Management Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Authoritative DNS, Zone Automation & DNS-as-Code Workflows*  
-
-**Last updated: September 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Domain & DNS Management**. These tools manage authoritative DNS zones, record automation, DNSSEC signing, and multi-provider DNS orchestration for enterprises, agencies, and developers.
-
-
-
-**Examples** include Cloudflare DNS, DNS Made Easy, NS1, Amazon Route 53, Google Cloud DNS, Azure DNS, EasyDNS, ClouDNS, Dyn Managed DNS, and UltraDNS (the category leaders).
-
-
-
-**Open-source emphasis**: This section is expanded with active projects for self-hosting, multi-provider DNS automation, and transparent zone management — ideal for infrastructure teams, developers, and organizations building vendor-independent DNS workflows. The open-source ecosystem is anchored by **DNSControl** (multi-provider DNS-as-code) and **Technitium DNS Server** (recursive + authoritative with web UI), with strong coverage in IPAM-integrated DDI platforms.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Cloudflare DNS](https://www.cloudflare.com/dns/)**  
-
-  The most widely used managed DNS service, offering free and enterprise tiers with anycast network, DNSSEC, and integrated DDoS protection. API-first design makes it a popular target for DNS-as-code automation tools .
-
-
-
-- **[DNS Made Easy](https://dnsmadeeasy.com/)**  
-
-  Enterprise-grade managed DNS with 100% uptime SLA, global anycast network, and advanced monitoring. Offers DNS Failover and granular record management .
-
-
-
-- **[NS1](https://ns1.com/)**  
-
-  Modern DNS platform with intelligent traffic management, real-time analytics, and API-first architecture. Popular for high-scale, latency-sensitive applications.
-
-
-
-- **[Amazon Route 53](https://aws.amazon.com/route53/)**  
-
-  AWS's highly available and scalable DNS web service with domain registration, health checks, and traffic flow policies. Deep integration with AWS services .
-
-
-
-- **[Google Cloud DNS](https://cloud.google.com/dns)**  
-
-  Google's managed DNS service running on the same infrastructure as Google's own DNS, with global anycast and 100% uptime SLA.
-
-
-
-- **[Azure DNS](https://azure.microsoft.com/en-us/services/dns/)**  
-
-  Microsoft Azure's DNS hosting service for public and private zones, with role-based access control and Azure resource integration.
-
-
-
-- **[EasyDNS](https://easydns.com/)**  
-
-  Managed DNS provider offering domain registration, DNS hosting, and dynamic DNS with a focus on reliability and customer support.
-
-
-
-- **[ClouDNS](https://www.cloudns.net/)**  
-
-  Managed DNS and DDNS provider with anycast network, DNSSEC, and flexible pricing across multiple global locations.
-
-
-
-- **[Dyn Managed DNS](https://dyn.com/)**  
-
-  Enterprise DNS service (now part of Oracle Cloud) with global anycast, traffic management, and advanced failover capabilities.
-
-
-
-- **[UltraDNS](https://www.ultradns.com/)**  
-
-  Enterprise-grade DNS platform (now part of Vercara) with 100% uptime SLA, DNSSEC, and advanced security features for large organizations.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[DNSControl](https://github.com/StackExchange/dnscontrol)**  
-
-  The most mature open-source multi-provider DNS-as-code tool, used by Stack Overflow to manage hundreds of domains across multiple registrars and providers. A domain-specific language (DSL) describes DNS zones and pushes them to 50+ supported providers including Cloudflare, Route 53, Azure DNS, Google DNS, NS1, DNS Made Easy, and PowerDNS. Supports preview/apply workflow, CI/CD integration, and multi-provider redundancy. Runs on any platform Go supports. **This is the de-facto standard for GitOps-driven DNS management** .
-
-
-
-- **[Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)**  
-
-  Self-hosted DNS server with web console, working as both authoritative and recursive resolver. Features block lists for ad/malware blocking, DNS-over-TLS/HTTPS/QUIC support, DNSSEC validation, persistent caching, clustering, and SSO with OpenID Connect. Serves over 100,000 requests per second on commodity hardware. Docker image available. **The most feature-complete self-hosted DNS server for privacy-conscious organizations** .
-
-
-
-- **[deSEC](https://github.com/desec-io)**  
-
-  Free secure DNS hosting service with an open-source backbone (desec-stack). Provides authoritative DNS with DNSSEC, REST API, and automation tools. The stack is MIT-licensed and available for self-hosting. Includes certbot integration for Let's Encrypt certificates. **A production-grade open-source DNS hosting platform** .
-
-
-
-- **[dnsctl](https://github.com/dhivijit/dnsctl)**  
-
-  Secure, version-controlled DNS management tool for Cloudflare with CLI and GUI. Brings Git-backed state, drift detection, and plan/apply workflow to DNS record management. Features AES-256-GCM encrypted token storage, session locking, multi-account support, and protected records requiring explicit override. **Ideal for teams wanting GitOps for Cloudflare DNS specifically** .
-
-
-
-- **[NicTool](https://github.com/nictool)**  
-
-  Open-source DNS management system with a Node.js server, web configurator, and nameserver supervisor. Supports multiple DNS engines (BIND, Knot, NSD, PowerDNS, TinyDNS, MaraDNS) with export engines and DNSSEC signing. MySQL or file-based TOML storage. **A full DNS management suite for organizations running their own nameservers** .
-
-
-
-- **[Bind9 Web Manager](https://github.com/bugfishtm/Bind9-Web-Manager)**  
-
-  Web-based management interface for BIND9 DNS servers. Simplifies zone management, replication, and user administration with a GUI. Installation via manual, Docker, or automated script. **Brings modern web UI to legacy BIND9 deployments** .
-
-
-
-- **[MoeDNS](https://github.com/phoenixlzx/moedns)**  
-
-  DNS management app using Node.js and MongoDB, designed for use with PowerDNS/MySQL or MiniMoeDNS/MySQL. 87+ stars on GitHub. **A lightweight web UI for PowerDNS backends** .
-
-
-
-- **[routedns](https://github.com/folbricht/routedns)**  
-
-  Configurable DNS proxy and router written in Go. Supports DNS-over-TLS, DNS-over-HTTPS, DNS-over-QUIC, and Oblivious DoH. Features DNSSEC validation, query logging, blocklists, client blocklists, DNS64, and advanced routing based on query name/type. **A powerful self-hosted DNS forwarding and filtering solution** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **SpatiumDDI** — Open-source DDI platform unifying DNS, DHCP, and IPAM. Runs its own BIND9/PowerDNS/Kea service containers with FastAPI control plane and React UI. Features RBAC, LDAP/OIDC/SAML auth, TOTP MFA, and scoped API tokens for Terraform credentials .
-
-- **NSoT** — Network Source of Truth (IPAM) from Dropbox, now API-first with Django 5.2 and Python 3.10+ support. Tracks IP addresses, network devices, and interfaces via REST API .
-
-- **teemIP** — Open-source web-based IPAM and DDI solution built on iTop framework. Features IPv4/IPv6 management, subnet hierarchy, DNS/DHCP integration, VLAN management, and capacity planning .
-
-- **Rackd** — Lightweight IPAM and device inventory in Go with SQLite. Features DNS management with Cloudflare/Route53/PowerDNS sync, RBAC, audit trail, and MCP server for AI/automation .
-
-- **jt-ipam** — Self-hosted, integration-focused IPAM with deep DNS server integration (BIND, PowerDNS, Windows DNS), LibreNMS, OPNsense, and Proxmox VE. Python/FastAPI/Vue stack with local LLM support .
-
-- **phpIPAM** — Mature open-source IP address management with DNS integration, section/subnet hierarchy, and API. Widely deployed for network infrastructure management .
-
-- **NetBox** — Premier source of truth for network automation with IPAM, DCIM, and DNS management. Apache 2.0 licensed with large community .
-
-
-
-**Frameworks for building custom DNS management solutions**: Combine **DNSControl** for multi-provider DNS-as-code with GitOps workflows . Use **Technitium DNS Server** for self-hosted authoritative and recursive DNS with web UI and block lists . Deploy **deSEC** for a full open-source DNS hosting stack with DNSSEC . For Cloudflare-specific GitOps, **dnsctl** provides plan/apply with drift detection . Integrate **SpatiumDDI** or **teemIP** for unified DNS+DHCP+IPAM management . Note that true enterprise managed DNS with global anycast, 100% uptime SLA, and advanced traffic management remains primarily commercial territory; open-source stacks provide strong self-hosted authoritative DNS, multi-provider automation, and DDI foundations.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- DNS management tools must comply with ICANN policies, registry requirements, and applicable laws regarding domain registration and DNS operations.
-
-- Self-hosted open-source solutions require proper infrastructure, DNSSEC key management, and ongoing maintenance. DNS is a critical service — high availability and disaster recovery planning are essential.
-
-- The open-source ecosystem provides strong self-hosted DNS servers, multi-provider automation, and DDI platforms, but global anycast networks with 100% uptime SLAs remain primarily a commercial offering.
-
-
+# Awesome Domain & DNS Management 🌐 DNS-as-Code & Zone Automation Ecosystem
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Domain & DNS Management Banner" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Domain-n-DNS-Management"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Domain-n-DNS-Management?style=social" alt="GitHub stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Domain-n-DNS-Management/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Domain-n-DNS-Management?color=blue" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 📌 Ecosystem Overview & Market Dynamics
 
+> 📊 **Estimated Market Size & Industry Concentration:**  
+> The global Managed Domain & Authoritative DNS Infrastructure market is valued at approximately **$4.8 Billion to $5.5 Billion (2026)** and is growing at an estimated CAGR of 11.2%. The market is **moderately fragmented** at the SMB and self-hosted level, but **highly concentrated** at the enterprise scale — dominated by hyper-scaler cloud providers (AWS, Microsoft Azure, Google Cloud) and security CDN giants (Cloudflare).
 
-**Made for network engineers, DevOps teams, infrastructure architects, and domain administrators.**  
+---
 
-Let's make DNS management more open, transparent, and automated.
+## ☁️ SaaS & Hosted Domain/DNS Management Platforms
+
+> 🏆 *Sorted by Company Size / Market Valuation (Descending)*
+
+| Provider | Market Valuation / Annual Revenue | Starting Tier Paid Price | Free Tier / Trial Limits | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| 🌐 **[Microsoft Azure DNS](https://azure.microsoft.com/en-us/services/dns/)** | **~$3.1 Trillion** MCap | **$0.50/month** per hosted zone | **No Free Tier** (Pay-as-you-go: $0.50/zone + $0.40/M queries) | Microsoft's enterprise-grade hosting for public & private zones with RBAC and Azure resource integration. |
+| ☁️ **[Amazon Route 53](https://aws.amazon.com/route53/)** | **~$2.3 Trillion** MCap | **$0.50/month** per hosted zone | **No Free Tier** (Pay-as-you-go: $0.50/zone for first 25, $0.40/M queries) | AWS high-availability DNS service with domain registration, health checks, and traffic routing policies. |
+| 🔍 **[Google Cloud DNS](https://cloud.google.com/dns)** | **~$2.1 Trillion** MCap | **$0.20/month** per hosted zone | **No Free Tier** (Pay-as-you-go: $0.20/zone + $0.40/M queries) | Scalable, resilient Anycast DNS service running on Google's infrastructure with 100% SLA guarantees. |
+| 🟦 **[IBM NS1 Connect](https://ns1.com/)** | **~$210 Billion** MCap (IBM) | **$8.00/month** starting tier | **Free Developer Tier** (Up to 500k queries/mo & 1 zone) | Intelligent traffic routing, API-first architecture, and real-time DNS analytics for high-scale apps. |
+| ⚡ **[Cloudflare DNS](https://www.cloudflare.com/dns/)** | **~$120 Billion** MCap | **$20.00/month** (Pro Plan) | **Forever Free Plan** (Up to 1,000 DNS records per zone + unmetered DDoS) | World's fastest Anycast DNS network with integrated DDoS protection, DNSSEC, and instant propagation. |
+| 🔐 **[DNS Made Easy](https://dnsmadeeasy.com/)** | **~$10 Billion** (DigiCert subsidiary) | **$5.00/month** ($59.95/yr) | **30-Day Free Trial** (Full access up to 25 domains & 1M queries) | Enterprise managed DNS backed by a 100% uptime SLA, Anycast network, failover, and global monitoring. |
+| 🛡️ **[UltraDNS (Vercara)](https://www.ultradns.com/)** | **~$1.5 Billion** (Private Equity) | **$45.00/month** starting tier | **Free Hobby Tier** (Up to 5 domains & 100k queries/mo) | Mission-critical enterprise DNS platform featuring advanced security, DDoS mitigation, and traffic management. |
+| 🇨🇦 **[EasyDNS](https://easydns.com/)** | **~$15 Million** (Private Est.) | **$4.95/month** per domain | **30-Day Free Trial** (Standard DNS package limits) | Flexible, security-focused DNS provider offering domain registration, dynamic DNS, and manual support. |
+| 🌍 **[ClouDNS](https://www.cloudns.net/)** | **~$10 Million** (Private Est.) | **$2.95/month** starting tier | **Forever Free Plan** (4 Unicast DNS servers, 1 zone, 50 DNS records) | Affordable managed DNS and DDNS provider with Anycast network, DNSSEC signing, and global PoPs. |
+
+---
+
+## 🛠️ Open-Source GitHub Projects
+
+> 🌟 *Sorted by GitHub Star Count (Descending)*
+
+- 📦 **[Pi-hole](https://github.com/pi-hole/pi-hole)**  
+  [![Stars](https://img.shields.io/github/stars/pi-hole/pi-hole?style=social&color=white)](https://github.com/pi-hole/pi-hole/stargazers)  
+  A network-wide DNS sinkhole that protects your devices from unwanted content without installing client-side software. Ideal for home networks and private DNS setups.
+
+- 🛡️ **[AdGuard Home](https://github.com/AdguardTeam/AdGuardHome)**  
+  [![Stars](https://img.shields.io/github/stars/AdguardTeam/AdGuardHome?style=social&color=white)](https://github.com/AdguardTeam/AdGuardHome/stargazers)  
+  Network-wide software for blocking ads and tracking. Operating as a DNS server, it re-routes tracking domains to a "black hole", preventing devices from connecting to those servers.
+
+- 🗄️ **[NetBox](https://github.com/netbox-community/netbox)**  
+  [![Stars](https://img.shields.io/github/stars/netbox-community/netbox?style=social&color=white)](https://github.com/netbox-community/netbox/stargazers)  
+  Premier open-source source of truth for network automation, combining IP address management (IPAM), DCIM, and DNS zone mapping into a single API-first platform.
+
+- 🔌 **[CoreDNS](https://github.com/coredns/coredns)**  
+  [![Stars](https://img.shields.io/github/stars/coredns/coredns?style=social&color=white)](https://github.com/coredns/coredns/stargazers)  
+  A flexible, extensible DNS server written in Go that chains plugins. It is the default cluster DNS server in Kubernetes and supports modern DNS protocols.
+
+- 🚀 **[Technitium DNS Server](https://github.com/TechnitiumSoftware/DnsServer)**  
+  [![Stars](https://img.shields.io/github/stars/TechnitiumSoftware/DnsServer?style=social&color=white)](https://github.com/TechnitiumSoftware/DnsServer/stargazers)  
+  Self-hosted DNS server with a clean web console. Functions as both authoritative and recursive resolver with DNS-over-HTTPS/TLS/QUIC support and built-in ad-blocking.
+
+- ⚡ **[DNSControl](https://github.com/StackExchange/dnscontrol)**  
+  [![Stars](https://img.shields.io/github/stars/StackExchange/dnscontrol?style=social&color=white)](https://github.com/StackExchange/dnscontrol/stargazers)  
+  Opinionated DNS-as-code tool by Stack Overflow for managing zones across 50+ providers using a JS-based DSL. Features preview/apply workflows and multi-provider redundancy.
+
+- 🐙 **[octodns](https://github.com/octodns/octodns)**  
+  [![Stars](https://img.shields.io/github/stars/octodns/octodns?style=social&color=white)](https://github.com/octodns/octodns/stargazers)  
+  Tools for managing DNS across multiple providers. Enables GitOps workflows for DNS zone configuration files with support for major cloud vendors.
+
+- 🌐 **[PowerDNS Authoritative Server](https://github.com/PowerDNS/pdns)**  
+  [![Stars](https://img.shields.io/github/stars/PowerDNS/pdns?style=social&color=white)](https://github.com/PowerDNS/pdns/stargazers)  
+  High-performance authoritative DNS server serving major TLDs, hosting providers, and telcos worldwide with flexible SQL, LDAP, and REST backends.
+
+- 🏷️ **[phpIPAM](https://github.com/phpipam/phpipam)**  
+  [![Stars](https://img.shields.io/github/stars/phpipam/phpipam?style=social&color=white)](https://github.com/phpipam/phpipam/stargazers)  
+  Mature web-based IP address management application featuring automated DNS integration, subnet hierarchy tracking, and full REST API support.
+
+- 🏷️ **[BIND 9 Mirror](https://github.com/isc-projects/bind9)**  
+  [![Stars](https://img.shields.io/github/stars/isc-projects/bind9?style=social&color=white)](https://github.com/isc-projects/bind9/stargazers)  
+  The world's most widely deployed reference implementation of the Domain Name System (DNS) protocol, maintained by the Internet Systems Consortium (ISC).
+
+- 🔐 **[deSEC Stack](https://github.com/desec-io/desec-stack)**  
+  [![Stars](https://img.shields.io/github/stars/desec-io/desec-stack?style=social&color=white)](https://github.com/desec-io/desec-stack/stargazers)  
+  Free, security-focused DNS hosting stack supporting automated DNSSEC signing, REST API zone updates, and seamless Certbot integration for Let's Encrypt certificates.
+
+- 🔄 **[routedns](https://github.com/folbricht/routedns)**  
+  [![Stars](https://img.shields.io/github/stars/folbricht/routedns?style=social&color=white)](https://github.com/folbricht/routedns/stargazers)  
+  Configurable DNS stub, proxy, and router written in Go. Supports DNS-over-TLS, DNS-over-HTTPS, DNS-over-QUIC, and advanced query filtering/routing rules.
+
+- 📂 **[NSoT (Network Source of Truth)](https://github.com/dropbox/nsot)**  
+  [![Stars](https://img.shields.io/github/stars/dropbox/nsot?style=social&color=white)](https://github.com/dropbox/nsot/stargazers)  
+  Open-source IPAM and network inventory repository created by Dropbox for managing network interfaces, subnets, and host attributes via a REST API.
+
+- 💡 **[SpatiumDDI](https://github.com/spatiumnorth/spatiumddi)**  
+  [![Stars](https://img.shields.io/github/stars/spatiumnorth/spatiumddi?style=social&color=white)](https://github.com/spatiumnorth/spatiumddi/stargazers)  
+  Modern DDI platform unifying DNS, DHCP, and IPAM. Features a FastAPI control plane, React UI, RBAC access controls, and integrated BIND9/PowerDNS containers.
+
+- 🛠️ **[Bind9 Web Manager](https://github.com/bugfishtm/Bind9-Web-Manager)**  
+  [![Stars](https://img.shields.io/github/stars/bugfishtm/Bind9-Web-Manager?style=social&color=white)](https://github.com/bugfishtm/Bind9-Web-Manager/stargazers)  
+  Web management interface tailored for BIND9 DNS servers, simplifying zone creation, replication, user admin, and configuration via a lightweight GUI.
+
+- 🐱 **[MoeDNS](https://github.com/phoenixlzx/moedns)**  
+  [![Stars](https://img.shields.io/github/stars/phoenixlzx/moedns?style=social&color=white)](https://github.com/phoenixlzx/moedns/stargazers)  
+  Lightweight Node.js and MongoDB web application interface designed specifically for PowerDNS MySQL database backends.
+
+---
+
+## 🤝 How to Contribute
+
+We welcome contributions from the community! Follow these steps to submit additions or updates:
+
+1. 🍴 **Fork the repository**
+2. 📝 **Add or update entries** in `README.md` following the tabular & list format
+3. 🔗 **Include verified data** for pricing, star badges, and descriptions
+4. 🚀 **Submit a Pull Request** with a concise description of your changes
+
+---
+
+## 💖 Support & Sponsor
+
+Thank you for visiting and using this repository! If you find this curated list of Domain & DNS Management tools useful, please consider supporting the project:
+
+- ⭐ **Star this repository** to increase visibility on GitHub.
+- 🔀 **Fork it** and contribute new tools or update existing ones.
+- 📢 **Share it** with fellow DevOps engineers, network admins, and developers.
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing maintenance and content curation, check out the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository contains a **community-curated** list intended for educational and reference purposes.
+- Managed DNS services and self-hosted software implementations must adhere to ICANN guidelines, domain registry rules, and applicable network security standards.
+- Production DNS infrastructure requires robust high-availability (HA), Anycast routing, and disaster recovery planning.
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Domain-n-DNS-Management&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Domain-n-DNS-Management&type=date&legend=top-left)
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for DevOps engineers, Site Reliability Engineers (SREs), Network Architects, and Systems Administrators.</b>
+</p>

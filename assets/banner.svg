@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="50%" stop-color="#161b22" />
+      <stop offset="100%" stop-color="#090d11" />
+    </linearGradient>
+
+    <!-- Accent Gradient for Text -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="50%" stop-color="#bc8cff" />
+      <stop offset="100%" stop-color="#3fb950" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .bg { fill: url(#bg-grad); }
+    .grid-line { stroke: #30363d; stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.4; }
+    
+    /* Dynamic Animated Elements (in background) */
+    @keyframes pulse-node {
+      0%, 100% { r: 6px; opacity: 0.4; }
+      50% { r: 10px; opacity: 0.9; filter: drop-shadow(0 0 6px #58a6ff); }
+    }
+    @keyframes float-pill {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes flow-line {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+    
+    .node-1 { animation: pulse-node 3s infinite ease-in-out; }
+    .node-2 { animation: pulse-node 4s infinite ease-in-out 1s; }
+    .node-3 { animation: pulse-node 3.5s infinite ease-in-out 0.5s; }
+    
+    .floating-card { animation: float-pill 6s infinite ease-in-out; }
+    .floating-card-2 { animation: float-pill 5s infinite ease-in-out 2s; }
+    
+    .connection-line {
+      stroke: #58a6ff;
+      stroke-width: 1.5;
+      stroke-dasharray: 8, 8;
+      animation: flow-line 20s linear infinite;
+      opacity: 0.35;
+    }
+    
+    /* Typography - Always Crisp & Foreground */
+    .title {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: url(#title-grad);
+      text-anchor: middle;
+    }
+    .subtitle {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #8b949e;
+      text-anchor: middle;
+    }
+    .tagline {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #3fb950;
+      letter-spacing: 2px;
+      text-anchor: middle;
+      text-transform: uppercase;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      fill: #c9d1d9;
+    }
+  </style>
+
+  <!-- Background Layer -->
+  <rect width="1200" height="360" rx="16" class="bg" />
+  
+  <!-- Decorative Background Grid -->
+  <line x1="100" y1="0" x2="100" y2="360" class="grid-line" />
+  <line x1="300" y1="0" x2="300" y2="360" class="grid-line" />
+  <line x1="600" y1="0" x2="600" y2="360" class="grid-line" />
+  <line x1="900" y1="0" x2="900" y2="360" class="grid-line" />
+  <line x1="1100" y1="0" x2="1100" y2="360" class="grid-line" />
+  
+  <line x1="0" y1="60" x2="1200" y2="60" class="grid-line" />
+  <line x1="0" y1="180" x2="1200" y2="180" class="grid-line" />
+  <line x1="0" y1="300" x2="1200" y2="300" class="grid-line" />
+
+  <!-- DYNAMIC / ANIMATED BACKGROUND ELEMENTS (Low opacity & positioned around borders so title is untouched) -->
+  <!-- Network Nodes & Wave Paths -->
+  <path d="M 80,80 Q 250,30 450,90 T 850,70 T 1120,100" fill="none" class="connection-line" />
+  <path d="M 50,280 Q 300,320 600,260 T 1150,290" fill="none" class="connection-line" style="stroke: #bc8cff;" />
+
+  <!-- Animated Nodes -->
+  <circle cx="80" cy="80" r="8" fill="#58a6ff" class="node-1" />
+  <circle cx="450" cy="90" r="8" fill="#bc8cff" class="node-2" />
+  <circle cx="850" cy="70" r="8" fill="#3fb950" class="node-3" />
+  <circle cx="1120" cy="100" r="8" fill="#58a6ff" class="node-1" />
+
+  <circle cx="200" cy="290" r="7" fill="#3fb950" class="node-2" />
+  <circle cx="600" cy="260" r="7" fill="#58a6ff" class="node-3" />
+  <circle cx="1000" cy="285" r="7" fill="#bc8cff" class="node-1" />
+
+  <!-- Background Floating Pills/Badges (Edges only) -->
+  <g class="floating-card" opacity="0.6">
+    <rect x="60" y="140" width="140" height="34" rx="17" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <circle cx="80" cy="157" r="5" fill="#3fb950" />
+    <text x="95" y="161" class="badge-text">DNSSEC Signed</text>
+  </g>
+
+  <g class="floating-card-2" opacity="0.6">
+    <rect x="1000" y="140" width="140" height="34" rx="17" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <circle cx="1020" cy="157" r="5" fill="#58a6ff" />
+    <text x="1035" y="161" class="badge-text">GitOps / Anycast</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT (Guaranteed visible and centered) -->
+  <g transform="translate(600, 140)">
+    <!-- Tagline -->
+    <text y="-40" class="tagline">⚡ AUTHORITATIVE DNS • ZONE AUTOMATION • DNS-AS-CODE ⚡</text>
+    
+    <!-- Title with Glow -->
+    <text y="20" class="title" filter="url(#soft-glow)">Awesome Domain &amp; DNS Management</text>
+    
+    <!-- Subtitle -->
+    <text y="65" class="subtitle">Curated SaaS Platforms, Enterprise Solutions &amp; Open-Source DNS Infrastructure</text>
+    
+    <!-- Status Badges Row in Banner -->
+    <g transform="translate(-180, 105)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="110" height="26" rx="13" fill="#21262d" stroke="#30363d" />
+      <text x="55" y="17" class="badge-text" text-anchor="middle" fill="#58a6ff">🌐 15+ SaaS</text>
+      
+      <!-- Pill 2 -->
+      <rect x="125" y="0" width="110" height="26" rx="13" fill="#21262d" stroke="#30363d" />
+      <text x="180" y="17" class="badge-text" text-anchor="middle" fill="#bc8cff">🛠️ 15+ OSS</text>
+      
+      <!-- Pill 3 -->
+      <rect x="250" y="0" width="110" height="26" rx="13" fill="#21262d" stroke="#30363d" />
+      <text x="305" y="17" class="badge-text" text-anchor="middle" fill="#3fb950">🚀 Updated 2026</text>
+    </g>
+  </g>
+</svg>

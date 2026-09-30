@@ -40,7 +40,7 @@
 
 ## 🛠️ Open-Source GitHub Projects
 
-> 🌟 *Sorted by GitHub Stars_Count (Descending)*
+> 🌟 *Sorted by GitHub_Stars_Count (Descending)*
 
 - 📦 **[Pi-hole](https://github.com/pi-hole/pi-hole)**  
   [![Stars](https://img.shields.io/github/stars/pi-hole/pi-hole?style=social&color=white)](https://github.com/pi-hole/pi-hole/stargazers)  

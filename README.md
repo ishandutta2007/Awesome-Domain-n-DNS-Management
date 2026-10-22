@@ -35,6 +35,7 @@
 | 🛡️ **[UltraDNS (Vercara)](https://www.ultradns.com/)** | **~$1.5 Billion** (Private Equity) | **$45.00/month** starting tier | **Free Hobby Tier** (Up to 5 domains & 100k queries/mo) | Mission-critical enterprise DNS platform featuring advanced security, DDoS mitigation, and traffic management. |
 | 🇨🇦 **[EasyDNS](https://easydns.com/)** | **~$15 Million** (Private Est.) | **$4.95/month** per domain | **30-Day Free Trial** (Standard DNS package limits) | Flexible, security-focused DNS provider offering domain registration, dynamic DNS, and manual support. |
 | 🌍 **[ClouDNS](https://www.cloudns.net/)** | **~$10 Million** (Private Est.) | **$2.95/month** starting tier | **Forever Free Plan** (4 Unicast DNS servers, 1 zone, 50 DNS records) | Affordable managed DNS and DDNS provider with Anycast network, DNSSEC signing, and global PoPs. |
+| 🔍 **[cl0q](https://cl0q.com)** | **Indie / bootstrapped** | **Free** | **Free web search + API (30 req/min, 1,000/day)** | Open search engine for domain research and OSINT — ~46.8M domains scanned, 33M+ pages indexed. |
 
 ---
 
